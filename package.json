@@ -1,19 +1,19 @@
 {
-  "name": "vscode-example-test-adapter",
+  "name": "foundry-vscode-test-adapter",
   "displayName": "Example Test Explorer",
   "description": "Run your Example tests in the Sidebar of Visual Studio Code",
   "icon": "img/icon.png",
-  "author": "Holger Benl <hbenl@evandor.de>",
-  "publisher": "hbenl",
+  "author": "Holger Benl <naps62@evandor.de>",
+  "publisher": "naps62",
   "version": "0.0.1",
   "license": "MIT",
-  "homepage": "https://github.com/hbenl/vscode-example-test-adapter",
+  "homepage": "https://github.com/naps62/foundry-vscode-test-adapter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hbenl/vscode-example-test-adapter.git"
+    "url": "https://github.com/naps62/foundry-vscode-test-adapter.git"
   },
   "bugs": {
-    "url": "https://github.com/hbenl/vscode-example-test-adapter/issues"
+    "url": "https://github.com/naps62/foundry-vscode-test-adapter/issues"
   },
   "categories": [
     "Other"
@@ -32,6 +32,7 @@
     "publish": "vsce publish"
   },
   "dependencies": {
+    "@types/node": "^17.0.34",
     "tslib": "^1.9.3",
     "vscode-test-adapter-api": "^1.7.0",
     "vscode-test-adapter-util": "^0.7.0"
@@ -53,14 +54,14 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Example Test Explorer configuration",
+      "title": "Foundry Test Explorer",
       "properties": {
-        "exampleExplorer.logpanel": {
+        "foundryExplorer.logpanel": {
           "description": "write diagnotic logs to an output panel",
           "type": "boolean",
           "scope": "resource"
         },
-        "exampleExplorer.logfile": {
+        "foundryExplorer.logfile": {
           "description": "write diagnostic logs to the given file",
           "type": "string",
           "scope": "resource"

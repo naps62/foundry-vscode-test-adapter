@@ -5,13 +5,9 @@
       "type": "extensionHost",
       "request": "launch",
       "name": "Example adapter",
-      "runtimeExecutable": "${execPath}",
-      "args": [
-        "--extensionDevelopmentPath=${workspaceFolder}"
-      ],
-      "outFiles": [
-        "${workspaceFolder}/out"
-      ]
+      "runtimeExecutable": "${execPath} ~/projects/wassieverse/smart-contract",
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+      "outFiles": ["${workspaceFolder}/out"]
     }
   ]
 }
