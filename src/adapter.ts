@@ -10,7 +10,7 @@ import {
 } from "vscode-test-adapter-api";
 import { Log } from "vscode-test-adapter-util";
 // import { loadFakeTests, runFakeTests } from "./fakeTests";
-import { loadFoundryTests } from "./test-loader";
+import { loadTests, runTests } from "./forge";
 
 /**
  * This class is intended as a starting point for implementing a "real" TestAdapter.
@@ -55,11 +55,7 @@ export class FoundryAdapter implements TestAdapter {
     this.testsEmitter.fire(<TestLoadStartedEvent>{ type: "started" });
 
     try {
-      const loadedTests = await loadFoundryTests(
-        this.workspace.uri.path,
-        this.log
-      );
-      // const loadedTests = await loadFakeTests();
+      const loadedTests = await loadTests(this.workspace.uri.path);
 
       if (!loadedTests) {
         this.log.warn("No tests found in workspace");
@@ -85,7 +81,7 @@ export class FoundryAdapter implements TestAdapter {
     });
 
     // in a "real" TestAdapter this would start a test run in a child process
-    // await runFakeTests(tests, this.testStatesEmitter);
+    await runTests(tests, this.workspace.uri.path, this.testStatesEmitter);
 
     this.testStatesEmitter.fire(<TestRunFinishedEvent>{ type: "finished" });
   }
