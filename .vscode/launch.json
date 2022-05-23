@@ -4,8 +4,8 @@
     {
       "type": "extensionHost",
       "request": "launch",
-      "name": "Example adapter",
-      "runtimeExecutable": "${execPath} ~/projects/wassieverse/smart-contract",
+      "name": "Foundry adapter",
+      "runtimeExecutable": "${execPath} ~/projects/hello",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
       "outFiles": ["${workspaceFolder}/out"]
     }

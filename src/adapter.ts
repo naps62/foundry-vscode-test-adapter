@@ -43,7 +43,7 @@ export class FoundryAdapter implements TestAdapter {
     public readonly workspace: vscode.WorkspaceFolder,
     private readonly log: Log
   ) {
-    this.log.info("Initializing example adapter");
+    this.log.info("Initializing Foundry test adapter");
 
     this.disposables.push(this.testsEmitter);
     this.disposables.push(this.testStatesEmitter);
@@ -73,7 +73,7 @@ export class FoundryAdapter implements TestAdapter {
   }
 
   async run(tests: string[]): Promise<void> {
-    this.log.info(`Running example tests ${JSON.stringify(tests)}`);
+    this.log.info(`Running foundry tests ${JSON.stringify(tests)}`);
 
     this.testStatesEmitter.fire(<TestRunStartedEvent>{
       type: "started",

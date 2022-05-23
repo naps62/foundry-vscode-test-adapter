@@ -7,11 +7,11 @@ export async function activate(context: vscode.ExtensionContext) {
   const workspaceFolder = (vscode.workspace.workspaceFolders || [])[0];
 
   // create a simple logger that can be configured with the configuration variables
-  // `exampleExplorer.logpanel` and `exampleExplorer.logfile`
+  // `foundryExplorer.logpanel` and `foundryExplorer.logfile`
   const log = new Log(
-    "exampleExplorer",
+    "foundryExplorer",
     workspaceFolder,
-    "Example Explorer Log"
+    "Foundry Explorer Log"
   );
   context.subscriptions.push(log);
 
@@ -25,7 +25,7 @@ export async function activate(context: vscode.ExtensionContext) {
   if (testExplorerExtension) {
     const testHub = testExplorerExtension.exports;
 
-    // this will register an ExampleTestAdapter for each WorkspaceFolder
+    // this will register an FoundryTestAdapter for each WorkspaceFolder
     context.subscriptions.push(
       new TestAdapterRegistrar(
         testHub,

@@ -1,9 +1,9 @@
 {
   "name": "foundry-vscode-test-adapter",
-  "displayName": "Example Test Explorer",
-  "description": "Run your Example tests in the Sidebar of Visual Studio Code",
-  "icon": "img/icon.png",
-  "author": "Holger Benl <naps62@evandor.de>",
+  "displayName": "Foundry Test Explorer",
+  "description": "Run your Foundry solidity tests right from VS Code's test explorer",
+  "icon": "img/foundry-logo.png",
+  "author": "Miguel Palhas <mpalhas@gmail.com>",
   "publisher": "naps62",
   "version": "0.0.1",
   "license": "MIT",
