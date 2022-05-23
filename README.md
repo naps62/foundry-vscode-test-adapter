@@ -9,7 +9,7 @@
 [foundry]: https://book.getfoundry.sh/
 [test-explorer]: ttps://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer
 
-![Screenshot][img/sample.png]
+![Screenshot](/img/sample.png)
 
 This repo contains a test adapter extension for running [Foundry][foundry] test suites within VS Code's [Test Explorer][test-explorer] extension.
 
